@@ -1,0 +1,21 @@
+{
+  "name": "leekwars-panel-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@c-louis/leekwars-api-automation": "^1.2.1",
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "core-js": "^3.9.1",
+    "mocha": "^8.4.0",
+    "nuxt": "^2.15.3",
+    "nuxt-buefy": "^0.4.4"
+  },
+  "devDependencies": {}
+}
