@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">14"
+    "node": "v14.17.0"
   },
   "name": "leekwars-panel-automation",
   "version": "1.0.0",
