@@ -1,11 +1,9 @@
 <template>
-  <LeekAction v-if="isLogged">
-  </LeekAction>
+  <LeekAction v-if="isLogged"></LeekAction>
   <LeekLogin
     v-else
     v-on:childToParent="onChild"
-  >
-  </LeekLogin>
+  ></LeekLogin>
 </template>
 
 <script>

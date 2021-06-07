@@ -15,10 +15,10 @@
     "@c-louis/leekwars-api-automation": "^1.2.1",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
-    "core-js": "^3.9.1",
+    "core-js": "^3.14.0",
     "mocha": "^8.4.0",
-    "nuxt": "^2.15.3",
-    "nuxt-buefy": "^0.4.4"
-  },
-  "devDependencies": {}
+    "nuxt": "^2.2.0",
+    "nuxt-buefy": "^0.4.7",
+    "nuxt-fix": "^1.4.6"
+  }
 }
