@@ -13,7 +13,6 @@
             <div class="content has-text-centered">
               <table>
                 <thead>
-                  <th>ID</th>
                   <th>Name</th>
                   <th>Talent</th>
                   <th></th>
@@ -23,7 +22,6 @@
                     <th colspan="4">{{ Object.values(farmer.leeks).find(element => element.id == leekid).name }}</th>
                   </tr>
                   <tr v-for="opponent of opponents" :key="opponent.id">
-                    <td>{{ opponent.id }}</td>
                     <td>{{ opponent.name }}</td>
                     <td>{{ opponent.talent }}</td>
                     <td>
@@ -47,14 +45,12 @@
             <div class="content has-text-centered">
               <table>
                 <thead>
-                  <th>ID</th>
                   <th>Name</th>
                   <th>Talent</th>
                   <th></th>
                 </thead>
                 <tbody>
                   <tr v-for="opponent of farmerOpponents" :key="opponent.id">
-                    <td>{{ opponent.id }}</td>
                     <td>{{ opponent.name }}</td>
                     <td>{{ opponent.talent }}</td>
                     <td>
@@ -90,7 +86,6 @@ export default {
   methods: {
     async loadLeeksOpponent() {
       var leeks = Object.values(this.farmer.leeks);
-      this.leeksOpponent = {};
       for (var leek of leeks) {
         let data = this.leekapi.leekOpponents(leek.id).then((res) => {
           this.$set(this.leeksOpponent, leek.id, res['opponents']);
@@ -109,7 +104,6 @@ export default {
     },
     farmerFight(target_id) {
       this.leekapi.farmerFight(target_id, true).then((res) => {
-        console.log(res);
         this.loadFarmerOpponent();
       }).catch((err) => {
         console.log(err);
@@ -117,7 +111,6 @@ export default {
     },
     leekFight(leek_id, target_id) {
       this.leekapi.leekFight(leek_id, target_id, true).then((res) => {
-        console.log(res);
         this.loadLeeksOpponent();
       }).catch((err) => {
         console.log(err);

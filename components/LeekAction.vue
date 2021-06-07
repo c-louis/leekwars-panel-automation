@@ -23,6 +23,11 @@
     </div>
   </div>
   <div v-if="farmer != null">
+    <LeekBatch
+      v-bind:farmer="farmer"
+      v-bind:leekapi="leekapi"
+      v-bind:selectedLeeks="selectedLeeks">
+    </LeekBatch>
     <LeekManual
       v-bind:farmer="farmer"
       v-bind:leekapi="leekapi"
@@ -47,8 +52,6 @@ export default {
     async load() {
       let data = this.leekapi.loginWithToken().then((res) => {
           this.farmer = res.farmer;
-          this.loadFarmerOpponent();
-        this.loadLeeksOpponent();
       }).catch((err) => {
           console.log(err);
       });

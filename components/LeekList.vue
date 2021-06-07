@@ -1,6 +1,7 @@
 <template>
 <div class="content">
 	<h3 class="subtitle is-3">Farmer : {{ farmer.login }}</h3>
+	<h4 class="subtitle is-5">You have : {{ farmer.fights }} fights</h4>
 	<table>
 		<thead>
 			<tr>
