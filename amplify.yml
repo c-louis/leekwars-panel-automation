@@ -5,7 +5,7 @@ frontend:
       commands:
         - rm .npmrc
         - bash -c 'echo "@c-louis:registry=https://npm.pkg.github.com/" > .npmrc'
-        - bash -c 'echo "//registry.npmjs.org/:_authToken=${GITHUB_TOKEN}" >> .npmrc'
+        - bash -c 'echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc'
         - npm ci
     build:
       commands:
